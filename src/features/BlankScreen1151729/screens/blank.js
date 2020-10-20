@@ -23,11 +23,24 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = { TextInput_7: "" }
 
   render = () => (
     <View style={styles.View_1}>
-      <View style={styles.View_3} />
+      <Image
+        resizeMode="center"
+        source={{
+          uri:
+            "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/images-1.jpg"
+        }}
+        style={styles.Image_3}
+      />
+      <TextInput
+        placeholder="Type an item to search"
+        style={styles.TextInput_7}
+        value={this.state.TextInput_7}
+        onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
+      />
     </View>
   )
 }
@@ -40,5 +53,8 @@ const styles = StyleSheet.create({
 
   View_1: { height: 200, alignItems: "center" },
   View_1: { height: 200, alignItems: "center" },
-  View_3: { height: 200, alignItems: "center" }
+  View_3: { height: 200, alignItems: "center" },
+  View_1: { height: 200, alignSelf: "flex-start", alignItems: "center" },
+  Image_3: { width: 303, height: 130 },
+  TextInput_7: { marginTop: 8, marginBottom: 15 }
 })
