@@ -25,7 +25,11 @@ export default class Blank extends React.Component {
 
   state = {}
 
-  render = () => <View style={styles.View_1} />
+  render = () => (
+    <View style={styles.View_1}>
+      <View style={styles.View_3} />
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -33,5 +37,8 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
-  View_1: { height: 200, alignItems: "center" }
+
+  View_1: { height: 200, alignItems: "center" },
+  View_1: { height: 200, alignItems: "center" },
+  View_3: { height: 200, alignItems: "center" }
 })
